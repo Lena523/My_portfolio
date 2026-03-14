@@ -1,4 +1,4 @@
-name: Project CI
+name: Project CI/CD
 
 on: [push]
 
@@ -6,7 +6,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,3 +27,12 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Deploy to Netlify
+        if: github.ref == 'refs/heads/main'
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=dist --prod
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
