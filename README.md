@@ -1,45 +1,57 @@
-# 💻 my-portfolio
+- # 💻 my-portfolio
 
-A professional, high-performance portfolio application built with **React 19**, **TypeScript 5**, and **Vite 8**, featuring a robust testing suite and automated code quality workflows.
+  A professional, high-performance portfolio application built with **React 19**, **TypeScript 5**, and **Vite 8**, featuring a robust testing suite and automated code quality workflows.
 
----
+  ***
 
-## ✨ Features
+  ## ✨ Features
 
-### 🎨 Modern Styling with Emotion
+  ### 🚀 Automated CI/CD Pipeline
+  - **GitHub Actions**: Full automation of code checks on every push.
+  - **Node.js 25**: Using the latest "Current" runtime environment.
+  - **Continuous Integration**: Automated Vitest execution and project building.
+  - **Continuous Deployment**: Automatic deployment to **Netlify** from the `main` branch after successful tests.
 
-- **Styled Components** via `@emotion/styled` for modular, reusable UI.
-- **Dynamic CSS-in-JS** with `@emotion/react` for flexible styling.
-- **Optimized Performance** using the modern React 19 JSX runtime.
+  ### 🎨 Modern Styling with Emotion
+  - **Styled Components** via `@emotion/styled` for modular, reusable UI.
+  - **Dynamic CSS-in-JS** with `@emotion/react` for flexible styling.
+  - **Optimized Performance** using the modern React 19 JSX runtime.
 
-### 🚦 Navigation & Routing
+  ### 🚦 Navigation & Routing
+  - **React Router 7** for seamless Single Page Application (SPA) transitions.
+  - **Declarative Routing** with strict TypeScript integration.
 
-- **React Router 7** for seamless Single Page Application (SPA) transitions.
-- **Declarative Routing** with strict TypeScript integration.
-- **Path-based Navigation** for all portfolio sections and projects.
+  ### 🧪 Comprehensive Testing Setup
+  - **Vitest 4** for lightning-fast unit and integration testing.
+  - **React Testing Library** for user-centric component validation.
+  - **JSDOM 28** environment for accurate browser API simulation.
 
-### 🧪 Comprehensive Testing Setup
+  ### 🧹 Code Quality & DX
+  - **ESLint 9** (Flat Config) with TypeScript-specific rules for clean code.
+  - **Prettier 3.8** for automated, consistent formatting across the project.
+  - **Husky 9** for pre-commit and pre-push automation hooks.
+  - **lint-staged 16** to automatically fix and format staged files.
 
-- **Vitest 4** for lightning-fast unit and integration testing.
-- **React Testing Library** for user-centric component validation.
-- **JSDOM 28** environment for accurate browser API simulation.
-- **Code Coverage** reporting via `@vitest/coverage-v8`.
+  ***
 
-### 🧹 Code Quality & DX
+  ## 🛠 Installation & Usage
 
-- **ESLint 9** (Flat Config) with TypeScript-specific rules for clean code.
-- **Prettier 3.8** for automated, consistent formatting across the project.
-- **Husky 9** for pre-commit and pre-push automation hooks.
-- **lint-staged 16** to automatically fix and format staged files.
+  To set up the project locally, run the following commands:
 
----
+  ```bash
+  # Clone the repository
+  git clone https://github.com
 
-## 📦 Installation
+  # Navigate to the folder and install dependencies
+  cd my-portfolio
+  npm install
 
-**Clone and install:**
+  # Start development server
+  npm run dev
 
-```bash
-git clone https://github.com
-cd my-portfolio
-npm install
-```
+  # Run tests (Vitest)
+  npm test
+
+  # Build for production (creates dist folder)
+  npm run build
+  ```
