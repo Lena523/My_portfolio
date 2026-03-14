@@ -1,4 +1,4 @@
-name: My CI
+name: Project CI
 
 on: [push]
 
@@ -7,5 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello
-        run: echo "Pipeline is running"
+      - name: Checkout repository content
+        uses: actions/checkout@v4
+
+      - name: List files in repository
+        run: ls -la
