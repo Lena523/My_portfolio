@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
     <div>
-      <img src="logo.svg"></img>
+      <p>Elena Khadasevich</p>
     </div>
   );
 }
